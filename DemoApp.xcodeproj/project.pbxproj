@@ -15,6 +15,7 @@
 		1A77015C1FA5098400BABFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A77015A1FA5098400BABFC5 /* LaunchScreen.storyboard */; };
 		1A7701641FAA576700BABFC5 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7701631FAA576700BABFC5 /* RecipesViewController.swift */; };
 		1A77016A1FAA605200BABFC5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7701691FAA605200BABFC5 /* CoreDataManager.swift */; };
+		1AC4729A1FBA1C3700601881 /* AddNewRecipesViweController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC472991FBA1C3700601881 /* AddNewRecipesViweController.swift */; };
 		1ADE71D01FAA636000B3BC69 /* Recipes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */; };
 		1ADE71D11FAA636000B3BC69 /* Recipes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */; };
 		2C0CA86E81978A59A4AF39FA /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53593CF3031ACCC5B342888E /* Pods_DemoApp.framework */; };
@@ -32,6 +33,7 @@
 		1A77015D1FA5098400BABFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7701631FAA576700BABFC5 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1A7701691FAA605200BABFC5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1AC472991FBA1C3700601881 /* AddNewRecipesViweController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecipesViweController.swift; sourceTree = "<group>"; };
 		1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53593CF3031ACCC5B342888E /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,19 +73,36 @@
 		1A77014D1FA5098400BABFC5 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */,
-				1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */,
+				1AC4729C1FBA1EFF00601881 /* Model */,
 				1A77014E1FA5098400BABFC5 /* AppDelegate.swift */,
-				1A7701501FA5098400BABFC5 /* RecipesDetailsViewController.swift */,
+				1AC4729B1FBA1C6400601881 /* ViewControllers */,
 				1A7701521FA5098400BABFC5 /* Main.storyboard */,
 				1A7701581FA5098400BABFC5 /* Assets.xcassets */,
 				1A77015A1FA5098400BABFC5 /* LaunchScreen.storyboard */,
 				1A77015D1FA5098400BABFC5 /* Info.plist */,
 				1A7701551FA5098400BABFC5 /* DemoApp.xcdatamodeld */,
-				1A7701631FAA576700BABFC5 /* RecipesViewController.swift */,
 				1A7701691FAA605200BABFC5 /* CoreDataManager.swift */,
 			);
 			path = DemoApp;
+			sourceTree = "<group>";
+		};
+		1AC4729B1FBA1C6400601881 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A7701501FA5098400BABFC5 /* RecipesDetailsViewController.swift */,
+				1A7701631FAA576700BABFC5 /* RecipesViewController.swift */,
+				1AC472991FBA1C3700601881 /* AddNewRecipesViweController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1AC4729C1FBA1EFF00601881 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */,
+				1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9A35188C85B4FE556657ED42 /* Pods */ = {
@@ -237,6 +256,7 @@
 				1A7701511FA5098400BABFC5 /* RecipesDetailsViewController.swift in Sources */,
 				1A7701641FAA576700BABFC5 /* RecipesViewController.swift in Sources */,
 				1A7701571FA5098400BABFC5 /* DemoApp.xcdatamodeld in Sources */,
+				1AC4729A1FBA1C3700601881 /* AddNewRecipesViweController.swift in Sources */,
 				1ADE71D01FAA636000B3BC69 /* Recipes+CoreDataClass.swift in Sources */,
 				1A77016A1FAA605200BABFC5 /* CoreDataManager.swift in Sources */,
 				1A77014F1FA5098400BABFC5 /* AppDelegate.swift in Sources */,

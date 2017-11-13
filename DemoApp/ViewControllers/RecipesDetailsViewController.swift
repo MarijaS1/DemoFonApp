@@ -15,11 +15,9 @@ class RecipesDetailsViewController: UIViewController {
     @IBOutlet weak var recipesNameLabel: UILabel!
     @IBOutlet weak var starRatingView: CosmosView!
     @IBOutlet weak var shortTextRecipes: UILabel!
-    @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var prepInLabel: UILabel!
     @IBOutlet weak var readyInLabel: UILabel!
     @IBOutlet weak var cookLabel: UILabel!
-    @IBOutlet weak var recipesTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
