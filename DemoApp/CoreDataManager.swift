@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 class CoreDataManager {
+    
+    let managedObjectContext = AppDelegate.sharedInstance.persistentContainer.viewContext
     
     // Can't init is singleton
     private init() { }
@@ -17,8 +20,24 @@ class CoreDataManager {
     
     static let sharedInstance = CoreDataManager()
     
-//    func insertRecipes(recipes:  Recipes){
-//        let recipes = NSEntityDescription.insertNewObjectForEntityForName("Recipes", inManagedObjectContext: managedObjectContext) as! Recipes
-//
-//    }
+    func insertRecipes(recipes:  Recipes){
+        
+       
+//        recipesObject = recipes
+        
+        
+    }
+    
+    func fetchAllRecipes() -> [Recipes] {
+        var recipes = [Recipes]()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Recipes")
+//        let predicate = NSPredicate(format: "firstName = %d", argumentArray: [allContacts[indexPath.row].firstName!])
+//        fetchRequest.predicate = predicate
+        do {
+            recipes = try managedObjectContext.fetch(fetchRequest) as! [Recipes]
+        } catch {
+            print("No contacts found")
+        }
+        return recipes
+    }
 }

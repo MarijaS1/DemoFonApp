@@ -9,10 +9,13 @@
 import UIKit
 
 class RecipesViewController: UIViewController {
+    
+    var recipes : [Recipes]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        recipes = CoreDataManager.sharedInstance.fetchAllRecipes()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -44,7 +47,7 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return recipes?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

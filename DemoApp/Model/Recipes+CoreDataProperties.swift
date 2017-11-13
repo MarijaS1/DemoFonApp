@@ -10,7 +10,6 @@
 import Foundation
 import CoreData
 
-
 extension Recipes {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Recipes> {
@@ -19,7 +18,6 @@ extension Recipes {
 
     @NSManaged public var cook: Int16
     @NSManaged public var image: NSData?
-    @NSManaged public var ingredients: String?
     @NSManaged public var preparation: Int16
     @NSManaged public var preparationText: String?
     @NSManaged public var rating: Double

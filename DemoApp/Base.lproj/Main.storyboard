@@ -189,7 +189,7 @@
                                                                 <rect key="frame" x="70.5" y="0.0" width="284.5" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -206,7 +206,7 @@
                                                                 <rect key="frame" x="89" y="0.0" width="266" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -223,7 +223,7 @@
                                                                 <rect key="frame" x="63" y="0.0" width="292" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -313,6 +313,7 @@
                         <outlet property="prepInTextField" destination="XAw-7Q-7Nv" id="fnA-YC-19C"/>
                         <outlet property="preparationTextField" destination="OC1-OH-Rgg" id="TQY-yV-3CS"/>
                         <outlet property="readyInTextField" destination="34m-Tn-O1R" id="IKv-73-df3"/>
+                        <outlet property="recipesImage" destination="oW9-JC-CNX" id="LZg-8l-Dtv"/>
                         <outlet property="shortDescTextField" destination="M2M-Ww-6bJ" id="43L-hE-pUS"/>
                     </connections>
                 </viewController>
