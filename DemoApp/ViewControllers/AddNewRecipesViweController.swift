@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 import CoreData
 
-class AddNewRecipesViewController: UIViewController {
+class AddNewRecipesViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -21,6 +21,8 @@ class AddNewRecipesViewController: UIViewController {
     @IBOutlet weak var preparationTextField: UITextView!
     @IBOutlet weak var addNewRecipesButton: UIButton!
     @IBOutlet weak var recipesImage: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +37,26 @@ class AddNewRecipesViewController: UIViewController {
     
     @IBAction func addRecipesButtoPressed(_ sender: UIButton) {
         if valid() {
-             var recipes = NSEntityDescription.insertNewObject(forEntityName: "Recipes", into: AppDelegate.sharedInstance.persistentContainer.viewContext) as! Recipes
+            let recipes = NSEntityDescription.insertNewObject(forEntityName: "Recipes", into: AppDelegate.sharedInstance.persistentContainer.viewContext) as! Recipes
             recipes.cook = Int16(cookTextField.text!)!
-            recipes.image = UIImagePNGRepresentation(recipesImage.image!) as! NSData
+            recipes.image = UIImagePNGRepresentation(recipesImage.image!)! as? NSData
             recipes.preparation = Int16(prepInTextField.text!)!
             recipes.rating = cosmosView.rating
             recipes.readyIn = Int16(readyInTextField.text!)!
             recipes.shortText = shortDescTextField.text
             recipes.preparationText = preparationTextField.text
+            recipes.title = nameTextField.text
             
             AppDelegate.sharedInstance.saveContext()
+            
+            let alert = UIAlertController(title: "", message: "Uspesno ste dodali recept", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            })
+            
+            alert.addAction(ok)
+            
+            present(alert, animated: true, completion: nil)
 //            CoreDataManager.sharedInstance.insertRecipes(recipes: recipes)
         }
     }
@@ -78,4 +90,26 @@ class AddNewRecipesViewController: UIViewController {
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
+    @IBAction func addRecipesImage(_ sender: UIButton) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        recipesImage.image = image
+        dismiss(animated:true, completion: nil)
+    }
+
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated:true, completion: nil)
+    }
+    
 }

@@ -23,5 +23,6 @@ extension Recipes {
     @NSManaged public var rating: Double
     @NSManaged public var readyIn: Int16
     @NSManaged public var shortText: String?
+    @NSManaged public var title: String?
 
 }

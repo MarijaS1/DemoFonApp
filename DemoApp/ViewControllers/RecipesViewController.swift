@@ -10,13 +10,20 @@ import UIKit
 
 class RecipesViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     var recipes : [Recipes]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipes = CoreDataManager.sharedInstance.fetchAllRecipes()
+//        self.tableView.register(RecepiesTableViewCell.self, forCellReuseIdentifier: "RecepiesTableViewCell")
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        recipes = CoreDataManager.sharedInstance.fetchAllRecipes()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,12 +58,16 @@ extension RecipesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecepiesTableViewCell", for: indexPath) as! RecepiesTableViewCell
+        
+        cell.recipes = recipes![indexPath.row]
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipesDetailsViewController") as? RecipesDetailsViewController {
-//            viewController.newsObj = newsObj
+            viewController.recipes = recipes![indexPath.row]
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }

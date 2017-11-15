@@ -16,6 +16,7 @@
 		1A7701641FAA576700BABFC5 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7701631FAA576700BABFC5 /* RecipesViewController.swift */; };
 		1A77016A1FAA605200BABFC5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7701691FAA605200BABFC5 /* CoreDataManager.swift */; };
 		1AC4729A1FBA1C3700601881 /* AddNewRecipesViweController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC472991FBA1C3700601881 /* AddNewRecipesViweController.swift */; };
+		1AC4729E1FBCD51800601881 /* RecepiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4729D1FBCD51800601881 /* RecepiesTableViewCell.swift */; };
 		1ADE71D01FAA636000B3BC69 /* Recipes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */; };
 		1ADE71D11FAA636000B3BC69 /* Recipes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */; };
 		2C0CA86E81978A59A4AF39FA /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53593CF3031ACCC5B342888E /* Pods_DemoApp.framework */; };
@@ -34,6 +35,7 @@
 		1A7701631FAA576700BABFC5 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		1A7701691FAA605200BABFC5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1AC472991FBA1C3700601881 /* AddNewRecipesViweController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecipesViweController.swift; sourceTree = "<group>"; };
+		1AC4729D1FBCD51800601881 /* RecepiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesTableViewCell.swift; sourceTree = "<group>"; };
 		1ADE71CE1FAA636000B3BC69 /* Recipes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53593CF3031ACCC5B342888E /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				1A77015D1FA5098400BABFC5 /* Info.plist */,
 				1A7701551FA5098400BABFC5 /* DemoApp.xcdatamodeld */,
 				1A7701691FAA605200BABFC5 /* CoreDataManager.swift */,
+				1AC4729F1FBCD6DA00601881 /* View */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -103,6 +106,15 @@
 				1ADE71CF1FAA636000B3BC69 /* Recipes+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1AC4729F1FBCD6DA00601881 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AC4729D1FBCD51800601881 /* RecepiesTableViewCell.swift */,
+			);
+			name = View;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9A35188C85B4FE556657ED42 /* Pods */ = {
@@ -254,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7701511FA5098400BABFC5 /* RecipesDetailsViewController.swift in Sources */,
+				1AC4729E1FBCD51800601881 /* RecepiesTableViewCell.swift in Sources */,
 				1A7701641FAA576700BABFC5 /* RecipesViewController.swift in Sources */,
 				1A7701571FA5098400BABFC5 /* DemoApp.xcdatamodeld in Sources */,
 				1AC4729A1FBA1C3700601881 /* AddNewRecipesViweController.swift in Sources */,
